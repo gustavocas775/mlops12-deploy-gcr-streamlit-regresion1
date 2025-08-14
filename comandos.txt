@@ -1,4 +1,27 @@
+
+
+## Paso 0: Vinculación
 gcloud init
-gcloud artifacts repositories create repo-mlops11-streamlit-datapath --repository-format docker --project project-mlops9-ino-streamlit --location us-central1
-gcloud builds submit --config=cloudbuild.yaml --project project-mlops9-ino-streamlit
-gcloud run services replace service.yaml --region us-central1 --project project-mlops9-ino-streamlit
+
+## Paso 1: Creación del repositorio
+gcloud artifacts repositories create repo-mlops12-streamlit-regresion --repository-format docker --project proyecto-0-gcastro --location us-central1
+
+## Paso de automatizacion
+
+
+
+----------------------------------------------
+
+
+
+
+
+## Paso 2: Crear la imagen de mi APLICACION y subir al repositorio
+gcloud builds submit --config=cloudbuild.yaml --project project-mlops-10-streamlit
+
+## Paso 3: Comando para despliegue o ejecución de la imagen en el repositorio
+gcloud run services replace service.yaml --region us-central1 --project project-mlops-10-streamlit
+
+## Paso 4: OPCIONAL, Dar permisos de acceso a mi APLICACION. ESTO SE EJECUTA UNA SOLA VEZ
+gcloud run services set-iam-policy servicio-streamlit-sesion-3-gustavo-castro gcr-service-policy.yaml --region us-central1 --project proyecto-0-gcastro
+
