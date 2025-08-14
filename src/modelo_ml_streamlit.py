@@ -43,7 +43,7 @@ def prediccion_o_inferencia(pipeline_de_test, datos_de_test):
 #Diseno de la Interface
 st.title("Proyecto Modelo ML (Random Forest) - Gustavo Castro - DATAPATH")
 
-image = Image.open('images/datapath-logo.png') #src/
+image = Image.open('src/images/datapath-logo.png') #src/
 st.image(image, use_container_width=True) #use_column_width esta "deprecated"
 
 st.sidebar.write("Suba el archivo CSV correspondiente para realizar la predicción")
@@ -61,7 +61,7 @@ if uploaded_file is not None:
     st.dataframe(df_de_los_datos_subidos)
 #-------------------------------------------------------------------------------------------
 #Cargar el Modelo ML o Cargar el Pipeline
-pipeline_de_produccion = joblib.load('precio_casas_pipeline_ramdon_forest_regresor.joblib') #src/
+pipeline_de_produccion = joblib.load('src/precio_casas_pipeline_ramdon_forest_regresor.joblib') #src/
 
 if st.sidebar.button("click aqui para enviar el CSV al Pipeline"):
     if uploaded_file is None:
