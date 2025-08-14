@@ -12,7 +12,11 @@ gcloud artifacts repositories create repo-mlops12-streamlit-regresion --reposito
 
 ----------------------------------------------
 
+git init
+git add .
+git commit -m "Proyecto de automatización de despliegue en GCR - Modelo Random Forest"
 
+git push -u origin main
 
 
 
